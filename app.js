@@ -371,24 +371,24 @@
     const entries = sortedEntries(cwd);
     const listingCount = 1 + entries.length; // ../ + entries
 
-    if (e.key === "j") {
+    if (e.key === "j" || e.key === "ArrowDown") {
       selectionIndex = (selectionIndex + 1) % listingCount;
       renderNetrw();
       e.preventDefault();
       return;
     }
-    if (e.key === "k") {
+    if (e.key === "k" || e.key === "ArrowUp") {
       selectionIndex = (selectionIndex - 1 + listingCount) % listingCount;
       renderNetrw();
       e.preventDefault();
       return;
     }
-    if (e.key === "Enter" || e.key === "l") {
+    if (e.key === "Enter" || e.key === "l" || e.key === "ArrowRight") {
       openSelectedFromNetrw();
       e.preventDefault();
       return;
     }
-    if (e.key === "h") {
+    if (e.key === "h" || e.key === "ArrowLeft") {
       goUpDir();
       e.preventDefault();
       return;
@@ -442,12 +442,12 @@
       e.preventDefault();
       return;
     }
-    if (e.key === "j") {
+    if (e.key === "j" || e.key === "ArrowDown") {
       bufferEl.scrollBy({ top: 24, behavior: "instant" });
       e.preventDefault();
       return;
     }
-    if (e.key === "k") {
+    if (e.key === "k" || e.key === "ArrowUp") {
       bufferEl.scrollBy({ top: -24, behavior: "instant" });
       e.preventDefault();
       return;
@@ -462,12 +462,12 @@
       content: [
         "Netrw help",
         "",
-        "j / k   : move down / up",
-        "h / l   : go up dir / open",
-        "Enter    : open",
-        "gg / G  : top / bottom",
-        "q       : close buffer",
-        "?       : this help",
+        "j / k / ↓ / ↑   : move down / up",
+        "h / l / ← / →   : go up dir / open",
+        "Enter           : open",
+        "gg / G          : top / bottom",
+        "q               : close buffer",
+        "?               : this help",
       ].join("\n")
     };
     openBuffer(help);
