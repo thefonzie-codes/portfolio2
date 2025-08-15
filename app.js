@@ -49,7 +49,7 @@
         name: "resume.pdf",
         type: "file",
         filetype: "pdf",
-        link: "#" // replace with your actual resume url
+        link: "#" // Resume here
       },
       {
         name: ".config",
@@ -115,9 +115,9 @@
     return (
       "# Contact\n" +
       "\n" +
-      "- Email: <your@email>\n" +
-      "- GitHub: https://github.com/your\n" +
-      "- LinkedIn: https://linkedin.com/in/your\n"
+      "- Email: alfonsobanzon@gmail.com\n" +
+      "- GitHub: https://github.com/thefonzie-codes\n" +
+      "- LinkedIn: https://linkedin.com/alfonso-banzon\n"
     );
   }
 
